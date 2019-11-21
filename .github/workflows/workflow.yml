@@ -1,0 +1,16 @@
+name: Workflow
+
+on: [push]
+
+env:
+  DOCKER_URL: some.docker.url
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Run a multi-line script
+        env:
+          DOCKER_IMAGE: ${{env.DOCKER_URL}}/image:latest
+        run: |
+          echo ${DOCKER_IMAGE}
