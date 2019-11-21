@@ -8,9 +8,12 @@ env:
 jobs:
   build:
     runs-on: ubuntu-latest
+    env:
+      DOCKER_IMAGE: ${{env.DOCKER_URL}}/image
     steps:
       - name: Run a multi-line script
         env:
-          DOCKER_IMAGE: ${{env.DOCKER_URL}}/image:latest
+          DOCKER_VERSION: ${{env.DOCKER_IMAGE}}:latest
         run: |
           echo ${DOCKER_IMAGE}
+          echo ${DOCKER_VERSION}
