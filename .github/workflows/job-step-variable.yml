@@ -1,4 +1,4 @@
-name: Workflow
+name: Job/Step Variable Workflow
 
 on: [push]
 

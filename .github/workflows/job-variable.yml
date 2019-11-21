@@ -1,4 +1,4 @@
-name: Failing Workflow
+name: Job Variable Workflow
 
 on: [push]
 
